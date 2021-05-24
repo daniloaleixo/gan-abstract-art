@@ -4,7 +4,9 @@ USER root
 
 RUN pip install --upgrade pip
 
-RUN pip install keras && pip install tensorflow && pip install keras_metrics && pip install opencv-python
+RUN pip install tensorflow
+RUN pip install keras
+RUN pip install keras_metrics && pip install opencv-python
 
 # Installing gym
 RUN git clone https://github.com/openai/gym.git && cd gym && pip install -e .
